@@ -7,12 +7,12 @@ const checked = (e) => {
     const self = e.target;
     const text = self.nextSibling.nextSibling.style;
     
-    if(self.style.background = "white"){
+    if(self.style.background == "white"){
         self.style.background = "turquoise"; 
         text.color = "lightgray";
         text.textDecoration = "line-through";
         return;
-    } else if (self.style.background == "turquoise"){
+    } else if (self.style.background = "turquoise"){
         self.style.background = "white"; 
         text.color = "black";
         text.textDecoration = "none";
