@@ -1,17 +1,18 @@
+//es6+
 const input = document.querySelector("#input");
 const con = document.querySelector("#container");
 const add = document.querySelector("#add");
 
-function checked(e){
+const checked = (e) => {
     const self = e.target;
     const text = self.nextSibling.nextSibling.style;
-
-    if(self.style.background == "white"){
+    
+    if(self.style.background = "white"){
         self.style.background = "turquoise"; 
         text.color = "lightgray";
         text.textDecoration = "line-through";
         return;
-    } else if (self.style.background = "turquoise"){
+    } else if (self.style.background == "turquoise"){
         self.style.background = "white"; 
         text.color = "black";
         text.textDecoration = "none";
@@ -19,20 +20,20 @@ function checked(e){
     }
 }
 
-function deleted(e){
+const deleted = (e) => {
     e.target.previousSibling.remove();
     e.target.nextSibling.remove();
     e.target.remove();
 }
 
-function makeCheck(){
+const makeCheck = () => {
     const newCheck = document.createElement("button");
     newCheck.setAttribute("id", "check");
     newCheck.addEventListener("click", checked);
     con.appendChild(newCheck);
 }
 
-function makeContent(){
+const makeContent = () => {
     const newDiv = document.createElement("div");
     newDiv.innerHTML = input.value;
     input.value = "";
@@ -40,14 +41,14 @@ function makeContent(){
     con.appendChild(newDiv);
 }
 
-function makeDelete(){
+const makeDelete = () => {
     const newDelete = document.createElement("button");
     newDelete.setAttribute("id", "delete");
     newDelete.addEventListener("click", deleted);
     con.appendChild(newDelete);
 }
 
-function makeTodo (){
+const makeTodo = () => {
     makeCheck();
     makeDelete();
     makeContent();
