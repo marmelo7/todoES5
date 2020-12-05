@@ -84,7 +84,7 @@ input::placeholder{
     height: 5%;
     border: 0;
     outline: 0;
-    background-image: url("../todo/img/1.png");
+    background-image: url("img/1.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-color: white;
