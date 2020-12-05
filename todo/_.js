@@ -1,10 +1,10 @@
-const input = document.querySelector("#input");
-const con = document.querySelector("#container");
-const add = document.querySelector("#add");
+var input = document.querySelector("#input");
+var con = document.querySelector("#container");
+var add = document.querySelector("#add");
 
 function checked(e){
-    const self = e.target;
-    const text = self.nextSibling.nextSibling.style;
+    var self = e.target;
+    var text = self.nextSibling.nextSibling.style;
 
     if(self.style.background == "white"){
         self.style.background = "turquoise"; 
@@ -26,14 +26,14 @@ function deleted(e){
 }
 
 function makeCheck(){
-    const newCheck = document.createElement("button");
+    var newCheck = document.createElement("button");
     newCheck.setAttribute("id", "check");
     newCheck.addEventListener("click", checked);
     con.appendChild(newCheck);
 }
 
 function makeContent(){
-    const newDiv = document.createElement("div");
+    var newDiv = document.createElement("div");
     newDiv.innerHTML = input.value;
     input.value = "";
     newDiv.setAttribute("id", "content");
@@ -41,7 +41,7 @@ function makeContent(){
 }
 
 function makeDelete(){
-    const newDelete = document.createElement("button");
+    var newDelete = document.createElement("button");
     newDelete.setAttribute("id", "delete");
     newDelete.addEventListener("click", deleted);
     con.appendChild(newDelete);
